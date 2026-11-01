@@ -1,0 +1,205 @@
+{
+  "personal_info": {
+    "name": "Pradeep Bhattarai",
+    "first_name": "Pradeep",
+    "last_name": "Bhattarai",
+    "title": "Software Engineer (Full Stack)",
+    "tagline": "I architect and build scalable real-time systems, resilient backends, and production mobile applications.",
+    "bio": "I'm Pradeep Bhattarai, a Software Engineer (Full Stack & Mobile) with a Bachelor's in Computer Engineering from Pulchowk Engineering Campus (IOE) and an ISC2 Certified in Cybersecurity (CC) credential. I specialize in architecting production cross-platform mobile apps using Flutter and engineering horizontally scalable backend services with Node.js, TypeScript, PostgreSQL (PostGIS), and Redis. Passionate about real-time streaming, distributed systems, clean architecture, and defensive security.",
+    "availability": "Available for opportunities",
+    "email": "pradeepbhattarai08@gmail.com",
+    "phone": "+977 (Nepal)",
+    "location": "Lalitpur, Nepal",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Pradeep",
+    "stats": {
+      "years_experience": "2+",
+      "live_projects": "4+"
+    },
+    "social": {
+      "github": "https://github.com/PradeepBhattarai",
+      "gitlab": "https://gitlab.com",
+      "linkedin": "https://www.linkedin.com/in/pradeep--bhattarai/",
+      "twitter": "https://x.com/PradeepBhattarai",
+      "portfolio": "https://github.com/PradeepBhattarai"
+    }
+  },
+  "education": [
+    {
+      "id": 1,
+      "degree": "Grade 10 (SEE)",
+      "institution": "H. Little Star English Boarding School",
+      "period": "Apr, 2018",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "degree": "+2 High School (Science)",
+      "institution": "Everest Higher Secondary English Boarding School",
+      "period": "2018 — 2020",
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "degree": "Bachelor's in Computer Engineering",
+      "institution": "IOE, Pulchowk Campus",
+      "period": "Apr, 2020 — Apr, 2024",
+      "status": "Completed"
+    },
+    {
+      "id": 4,
+      "degree": "ISC2 Certified in Cybersecurity (CC)",
+      "institution": "ISC2",
+      "period": "Apr, 2025",
+      "status": "Certified"
+    },
+    {
+      "id": 5,
+      "degree": "AWS Academy Graduate -- Cloud Foundations",
+      "institution": "Amazon Web Services (AWS Academy)",
+      "period": "Aug, 2024",
+      "status": "Certified"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "position": "Software Engineer (Full Stack)",
+      "company": "Nex Tech Corp Pvt. Ltd. (NexSewa)",
+      "location": "Lalitpur, Nepal",
+      "period": "Jun 2025 – Present",
+      "type": "Full-time",
+      "description": "Architected and shipped production cross-platform mobile apps in Flutter and developed high-throughput backend services and REST APIs in Node.js, Express, and TypeScript.",
+      "achievements": [
+        "Architected and shipped production Flutter applications (Icebreaker) with custom Google Maps clustering, on-device Google ML Kit face liveness verification, and Clean Architecture (BLoC)",
+        "Engineered backend microservices with Node.js, Express, and TypeScript, leveraging Prisma ORM and PostgreSQL (PostGIS) for low-latency spatial queries and geospatial indexing",
+        "Implemented real-time presence synchronization and messaging using Socket.IO with Redis Streams/Adapter and BullMQ task queues for horizontal scalability",
+        "Automated multi-platform CI/CD release pipelines using Codemagic for Play Store/App Store and GitHub Actions with Docker, AWS OIDC, and SSM for zero-downtime EC2 deployments"
+      ],
+      "technologies": ["Flutter", "Dart", "Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Prisma", "Redis", "Socket.IO", "Docker", "AWS", "Codemagic"]
+    },
+    {
+      "id": 2,
+      "position": "Full Stack & Microservices Developer",
+      "company": "Open Source & Personal Projects",
+      "location": "Remote / Lalitpur, Nepal",
+      "period": "2024 – 2025",
+      "type": "Independent",
+      "description": "Engineered distributed systems, AI-powered interactive mobile platforms, and offline-first mobile applications adhering to clean architecture and test-driven development.",
+      "achievements": [
+        "Built event-driven microservices platform (Ticketing App) utilizing NATS Streaming, MongoDB, and Next.js with comprehensive TDD unit and integration test suites in Jest",
+        "Developed interactive AI simulation platform (Voyage) with Flutter WebRTC and WebSocket signaling for low-latency audio/video streaming, Supabase, and Stripe/Khalti payments",
+        "Engineered offline-capable mobile blog platform with BLoC, GetIt dependency injection, and Hive local key-value caching"
+      ],
+      "technologies": ["Node.js", "TypeScript", "NATS Streaming", "Docker", "Kubernetes", "Flutter", "WebRTC", "Supabase", "Jest", "MongoDB"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Icebreaker",
+      "category": "Mobile & Full Stack",
+      "subtitle": "Real-Time Social & Venue Discovery Platform",
+      "description": "Location-based real-time social networking and venue discovery platform connecting people via live presence, seat sharing, direct messaging, and interactive map exploration.",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+      "technologies": ["Flutter", "Node.js", "TypeScript", "PostgreSQL", "PostGIS", "Prisma", "Socket.IO", "Redis", "Google Maps", "ML Kit"],
+      "features": ["Real-time proximity check-ins", "Google Maps venue clustering", "Socket.IO & Redis messaging", "Google ML Kit face liveness verification", "Open table sharing"],
+      "year": "2025",
+      "status": "Live",
+      "link": "https://github.com/PradeepBhattarai",
+      "demo": "https://apps.apple.com/np/app/icebreaker/id6793508868"
+    },
+    {
+      "id": 2,
+      "title": "Voyage",
+      "category": "AI & Mobile",
+      "subtitle": "AI IELTS & Visa Interview Preparation App",
+      "description": "Interactive AI-powered preparation platform helping users practice IELTS speaking and F1 visa interviews with low-latency streaming and automated evaluation feedback.",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+      "technologies": ["Flutter", "WebRTC", "WebSocket", "Node.js", "PostgreSQL", "Supabase", "Stripe", "Khalti", "BLoC"],
+      "features": ["AI conversational simulations", "Flutter WebRTC streaming", "Clean Architecture with BLoC", "Stripe & Khalti payments", "Speech evaluation metrics"],
+      "year": "2024",
+      "status": "Live",
+      "link": "https://github.com/PradeepBhattarai",
+      "demo": "https://apps.apple.com/us/app/voyage-ai-app/id6751870099"
+    },
+    {
+      "id": 3,
+      "title": "Ticketing App",
+      "category": "Microservices",
+      "subtitle": "Event-Driven Microservices Platform",
+      "description": "Enterprise-grade event-driven microservices platform with decoupled services for auth, ticket management, orders, expiration timers, and payments.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "technologies": ["Node.js", "TypeScript", "Express", "MongoDB", "NATS Streaming", "Docker", "Kubernetes", "Next.js", "Jest"],
+      "features": ["Decoupled microservices", "NATS Streaming event bus", "Concurrency locking", "Docker & Kubernetes (AKS)", "TDD Jest test suites"],
+      "year": "2024",
+      "status": "Completed",
+      "link": "https://github.com/PradeepBhattarai/ticketing_app",
+      "demo": "https://github.com/PradeepBhattarai/ticketing_app"
+    },
+    {
+      "id": 4,
+      "title": "Blog Posts Collection",
+      "category": "Mobile App",
+      "subtitle": "Offline-Capable Flutter Blog Application",
+      "description": "Feature-packed Flutter blog publishing and reader application featuring offline-first persistence, local key-value caching, and cloud synchronization.",
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80",
+      "technologies": ["Flutter", "Dart", "BLoC", "Hive", "Supabase", "GetIt", "Clean Architecture"],
+      "features": ["Offline-first Hive caching", "Supabase Auth & Storage", "Feature-first Clean Architecture", "Rich article creation"],
+      "year": "2024",
+      "status": "Completed",
+      "link": "https://github.com/PradeepBhattarai/BlogPostCollection",
+      "demo": "https://github.com/PradeepBhattarai/BlogPostCollection"
+    }
+  ],
+  "skills": {
+    "Mobile & Frontend": [
+      { "name": "Flutter", "level": 95 },
+      { "name": "Dart", "level": 95 },
+      { "name": "BLoC / Cubit", "level": 90 },
+      { "name": "Clean Architecture", "level": 90 },
+      { "name": "WebSockets", "level": 88 },
+      { "name": "WebRTC", "level": 82 },
+      { "name": "React.js", "level": 85 },
+      { "name": "Next.js", "level": 82 },
+      { "name": "Tailwind CSS", "level": 90 }
+    ],
+    "Backend & APIs": [
+      { "name": "Node.js", "level": 90 },
+      { "name": "Express.js", "level": 90 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "Prisma ORM", "level": 88 },
+      { "name": "Socket.IO", "level": 88 },
+      { "name": "BullMQ", "level": 85 },
+      { "name": "REST APIs", "level": 92 },
+      { "name": "NestJS", "level": 80 },
+      { "name": "NATS Streaming", "level": 80 }
+    ],
+    "Databases & Storage": [
+      { "name": "PostgreSQL", "level": 90 },
+      { "name": "PostGIS (Spatial DB)", "level": 88 },
+      { "name": "Redis", "level": 85 },
+      { "name": "Supabase", "level": 85 },
+      { "name": "Hive (Local DB)", "level": 85 },
+      { "name": "MongoDB", "level": 80 },
+      { "name": "MySQL", "level": 80 }
+    ],
+    "DevOps & Cloud": [
+      { "name": "Docker", "level": 85 },
+      { "name": "Kubernetes", "level": 80 },
+      { "name": "AWS (EC2, S3, SSM)", "level": 82 },
+      { "name": "GitHub Actions (CI/CD)", "level": 88 },
+      { "name": "Codemagic", "level": 88 },
+      { "name": "Linux / Bash", "level": 82 },
+      { "name": "Git", "level": 92 }
+    ],
+    "Languages": [
+      { "name": "Dart", "level": 95 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "JavaScript", "level": 90 },
+      { "name": "SQL", "level": 85 },
+      { "name": "Python", "level": 85 },
+      { "name": "C / C++", "level": 80 },
+      { "name": "Bash", "level": 78 }
+    ]
+  }
+}
