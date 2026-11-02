@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { useAppSelector } from '@/store/hooks';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Play, Apple, Github } from 'lucide-react';
 
 export const Projects = () => {
   const ref = useRef(null);
@@ -12,6 +12,21 @@ export const Projects = () => {
   const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
   const filteredProjects =
     filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+
+  const handleCardClick = (e: React.MouseEvent, project: (typeof projects)[0]) => {
+    // If clicking an inner explicit button/link, let it handle its own navigation
+    if ((e.target as HTMLElement).closest('a[data-inner-link]')) {
+      return;
+    }
+
+    if (project.appStore && project.playStore) {
+      e.preventDefault();
+      window.open(project.playStore, '_blank', 'noopener,noreferrer');
+      window.open(project.appStore, '_blank', 'noopener,noreferrer');
+    } else if (project.demo) {
+      window.open(project.demo, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <section id="projects" className="py-24 md:py-32 border-t border-border">
@@ -48,15 +63,21 @@ export const Projects = () => {
           {/* Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
-              <motion.a
+              <motion.div
                 key={project.id}
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={(e) => handleCardClick(e, project)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleCardClick(e as unknown as React.MouseEvent, project);
+                  }
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="group block"
+                className="group block text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground rounded-lg"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-border bg-secondary mb-5">
@@ -92,13 +113,59 @@ export const Projects = () => {
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4">
                     <span className="tabular-nums">{project.year}</span>
                     <span className="w-1 h-1 rounded-full bg-border" />
                     <span>{project.technologies.slice(0, 3).join(' · ')}</span>
                   </div>
+
+                  {/* Direct Store / Repository Action Badges */}
+                  <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-border/60">
+                    {project.playStore && (
+                      <a
+                        href={project.playStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-inner-link="true"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary text-foreground hover:bg-foreground hover:text-background transition-colors border border-border"
+                      >
+                        <Play size={11} className="fill-current" />
+                        Play Store
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                    {project.appStore && (
+                      <a
+                        href={project.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-inner-link="true"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary text-foreground hover:bg-foreground hover:text-background transition-colors border border-border"
+                      >
+                        <Apple size={12} />
+                        App Store
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                    {project.link && !project.playStore && !project.appStore && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-inner-link="true"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-secondary text-foreground hover:bg-foreground hover:text-background transition-colors border border-border"
+                      >
+                        <Github size={12} />
+                        GitHub
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </motion.a>
+              </motion.div>
             ))}
           </div>
         </motion.div>

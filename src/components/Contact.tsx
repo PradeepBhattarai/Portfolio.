@@ -19,14 +19,19 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent. I'll get back to you soon.");
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Hi Pradeep,\n\n${formData.message}\n\nBest regards,\n${formData.name}\nEmail: ${formData.email}`
+    );
+    window.location.href = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
+    toast.success(`Opening your email client to send message to ${personalInfo.email}`);
     setFormData({ name: '', email: '', message: '' });
   };
 
   const socialLinks = [
     { icon: Github, href: personalInfo.social.github, label: 'GitHub' },
     { icon: Linkedin, href: personalInfo.social.linkedin, label: 'LinkedIn' },
-    { icon: Twitter, href: personalInfo.social.twitter, label: 'Twitter' },
+    { icon: Twitter, href: personalInfo.social.twitter, label: 'Twitter / X' },
   ];
 
   const inputClass =

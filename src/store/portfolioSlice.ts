@@ -59,6 +59,8 @@ interface Project {
   status: string;
   link: string;
   demo: string;
+  appStore?: string;
+  playStore?: string;
 }
 
 interface Skill {

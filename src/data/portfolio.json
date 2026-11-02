@@ -19,7 +19,7 @@
       "github": "https://github.com/PradeepBhattarai",
       "gitlab": "https://gitlab.com",
       "linkedin": "https://www.linkedin.com/in/pradeep--bhattarai/",
-      "twitter": "https://x.com/PradeepBhattarai",
+      "twitter": "https://x.com/Pradeep11343444",
       "portfolio": "https://github.com/PradeepBhattarai"
     }
   },
@@ -97,7 +97,7 @@
     {
       "id": 1,
       "title": "Icebreaker",
-      "category": "Mobile & Full Stack",
+      "category": "Mobile & Backend",
       "subtitle": "Real-Time Social & Venue Discovery Platform",
       "description": "Location-based real-time social networking and venue discovery platform connecting people via live presence, seat sharing, direct messaging, and interactive map exploration.",
       "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
@@ -106,7 +106,9 @@
       "year": "2025",
       "status": "Live",
       "link": "https://github.com/PradeepBhattarai",
-      "demo": "https://apps.apple.com/np/app/icebreaker/id6793508868"
+      "demo": "https://apps.apple.com/np/app/icebreaker/id6793508868",
+      "appStore": "https://apps.apple.com/np/app/icebreaker/id6793508868",
+      "playStore": "https://play.google.com/store/apps/details?id=com.dafegen.icebreaker"
     },
     {
       "id": 2,
@@ -120,7 +122,9 @@
       "year": "2024",
       "status": "Live",
       "link": "https://github.com/PradeepBhattarai",
-      "demo": "https://apps.apple.com/us/app/voyage-ai-app/id6751870099"
+      "demo": "https://apps.apple.com/us/app/voyage-ai-app/id6751870099",
+      "appStore": "https://apps.apple.com/us/app/voyage-ai-app/id6751870099",
+      "playStore": "https://play.google.com/store/apps/details?id=com.voyageapp.ai"
     },
     {
       "id": 3,
